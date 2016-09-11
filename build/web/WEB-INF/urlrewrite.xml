@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : urlrewrite.xml
+    Created on : 18 janvier 2012, 21:45
+    Author     : pj
+    Description:
+        Purpose of the document follows.
+-->
+    <!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite3.2.dtd">
+
+<urlrewrite>
+    <rule>
+        <from>^/nimdo/creer-categorie.html$</from>
+        <to>/nimdo/CreerCategorie</to>
+    </rule>
+    <rule>
+        <from>^/nimdo/creer-sous-categorie.html$</from>
+        <to>/nimdo/CreerSousCategorie</to>
+    </rule>
+    <rule>
+        <from>^/nimdo/creer-sous-categorie-1-([0-9]{1,3}).html$</from>
+        <to>/nimdo/CreerSousCategorie?idCategorie=$1</to>
+    </rule>
+    <rule>
+        <from>^/ajouter-site.html$</from>
+        <to>AjouterSite</to>
+    </rule>
+    <rule>
+        <from>^/captcha.png$</from>
+        <to>/Captcha</to>
+    </rule>
+    <rule>
+        <from>^/categorie-([0-9]{1,3})-.{1,50}.html$</from>
+        <to>/Categorie1?idCategorie=$1</to>
+    </rule>
+    <rule>
+        <from>^/categorie-page-([0-9]{1,3})-([0-9]{1,3})-.{1,50}.html$</from>
+        <to>/Categorie1?idCategorie=$1&amp;page=$2</to>
+    </rule>
+    <rule>
+        <from>^/clic-site-([0-9]{1,5}).html</from>
+        <to>/ClicSite?idSite=$1</to>
+    </rule>
+    <rule>
+        <from>^/sous-categorie-([0-9]{1,3})-([0-9]{1,3})-.{1,50}.html$</from>
+        <to>/SousCategorie1?idCategorie=$1&amp;idSousCategorie=$2</to>
+    </rule>
+    <rule>
+        <from>^/sous-categorie-page-([0-9]{1,3})-([0-9]{1,3})-([0-9]{1,3})-.{1,50}.html$</from>
+        <to>/SousCategorie1?idCategorie=$1&amp;idSousCategorie=$2&amp;page=$3</to>
+    </rule>
+    <rule>
+        <from>^/top.html$</from>
+        <to>/Top</to>
+    </rule>
+    <rule>
+        <from>^/nimdo/liste-sites.html$</from>
+        <to>/nimdo/ListeSites</to>
+    </rule>
+    <rule>
+        <from>^/nimdo/liste-sites-1-([0-9]{1,3})-([0-9]{1,3}).html$</from>
+        <to>/nimdo/ListeSites?idCategorie=$1&amp;idSousCategorie=$2</to>
+    </rule>
+    <rule>
+        <from>^/nimdo/efface-site-([0-9]{1,5}).html$</from>
+        <to>/nimdo/ListeSites?idDel=$1</to>
+    </rule>
+</urlrewrite>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : web.xml
+    Created on : 12 janvier 2012, 20:22
+    Author     : pj
+    Description:
+        Purpose of the document follows.
+-->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <security-constraint>
+        <display-name>Test d'authentification tomcat</display-name>
+        <!-- Liste des pages protégées -->
+        <web-resource-collection>
+            <web-resource-name>Page sécurisée</web-resource-name>
+            <url-pattern>/nimdo/*</url-pattern>
+        </web-resource-collection>
+        <!-- Rôles des utilisateurs ayant le droit d'y accéder -->
+        <auth-constraint>
+            <role-name>adminzean</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <!-- Type d'authentification -->
+        <auth-method>BASIC</auth-method>
+        <realm-name>-:-ADMIN-:-</realm-name>
+    </login-config>
+    <!-- Rôles utilisés dans l'application -->
+    <security-role>
+        <description>Administrateur</description>
+        <role-name>adminzean</role-name>
+    </security-role>
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>servlets.Index</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IndexA</servlet-name>
+        <servlet-class>servlets.IndexA</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreerCategorie</servlet-name>
+        <servlet-class>servlets.CreerCategorie</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreerSousCategorie</servlet-name>
+        <servlet-class>servlets.CreerSousCategorie</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AjouterSite</servlet-name>
+        <servlet-class>servlets.AjouterSite</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Captcha</servlet-name>
+        <servlet-class>servlets.Captcha</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Categorie1</servlet-name>
+        <servlet-class>servlets.Categorie1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClicSite</servlet-name>
+        <servlet-class>servlets.ClicSite</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SousCategorie1</servlet-name>
+        <servlet-class>servlets.SousCategorie1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Top</servlet-name>
+        <servlet-class>servlets.Top</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListeSites</servlet-name>
+        <servlet-class>servlets.ListeSites</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern>/Index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IndexA</servlet-name>
+        <url-pattern>/nimdo/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreerCategorie</servlet-name>
+        <url-pattern>/nimdo/CreerCategorie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreerSousCategorie</servlet-name>
+        <url-pattern>/nimdo/CreerSousCategorie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjouterSite</servlet-name>
+        <url-pattern>/AjouterSite</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Captcha</servlet-name>
+        <url-pattern>/Captcha</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Categorie1</servlet-name>
+        <url-pattern>/Categorie1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClicSite</servlet-name>
+        <url-pattern>/ClicSite</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SousCategorie1</servlet-name>
+        <url-pattern>/SousCategorie1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Top</servlet-name>
+        <url-pattern>/Top</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListeSites</servlet-name>
+        <url-pattern>/nimdo/ListeSites</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>3000</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>Index</welcome-file>
+    </welcome-file-list>
+</web-app>

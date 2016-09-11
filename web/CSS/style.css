@@ -1,0 +1,266 @@
+/* 
+    Document   : style
+    Created on : 12 janv. 2012, 21:31:52
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+body {
+    font-family: Arial, serif;
+}
+a img {
+    border: none;
+}
+a {
+    color: #637f97;
+}
+a:hover {
+    text-decoration: none;
+    color: #d0514b;
+}
+header div.pagerank {
+    margin: auto;
+    text-align: center;
+    font-size: 0.8em;
+}
+header div.logo {
+    background-image: url("../GFXs/logo.png");
+    cursor: pointer;
+    width: 659px;
+    height: 113px;
+    margin-left: 20%;
+}
+header nav ul.menu li {
+    list-style: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 5px 5px 5px 5px;
+    border: solid 1px #000000;
+    background-color: #a1978d;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #333333;
+    display: inline-block;
+    vertical-align: middle;
+}
+header nav ul.menu li:hover {
+    background-color: #c99f57;
+}
+header nav ul.menu li a {
+    color: #333333;
+    text-decoration: none;
+}
+header nav ul.menu li a:hover {
+    color: #000000;
+}
+section {
+    min-height: 600px;
+    background-color: #e9e8e2;
+    font-size: 0.8em;
+    font-family: Arial, serif;
+}
+section h1 {
+    color: #c99f57;
+}
+section h1 strong {
+    font-weight: 600;
+}
+section h2 {
+    color: #5777c9;
+    font-size: 1.2em;
+}
+section h2 strong {
+    font-weight: 600;
+}
+section strong {
+    font-weight: 500;
+}
+section div.info,
+section div.info strong {
+    background-color: #a1978d;
+    font-weight: 600;
+    color: #333333;
+}
+section ul.reseauxSoc {
+    margin-left: 0%;
+    padding: 0px;
+}
+section ul.reseauxSoc li {
+    list-style: none;
+    margin-left: 5px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+section div.erreur {
+    border: solid 1px #cc0000;
+    background-color: #e3cec7;
+    color: #000000;
+    font-weight: 700;
+    font-family: Arial,serif;
+    padding: 5px 5px 5px 5px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #660000;
+}
+section div.cadre {
+    border: solid 1px #adadad;
+    width: 70%;
+    padding: 10px 10px 10px 10px;
+    background-color: #ffffeb;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #333333;
+}
+
+section div.colonneGauche {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    text-align: center;
+    margin-right: 10px;
+}
+section div.colonneGauche nav ul.menu {
+    list-style: none;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+section div.colonneGauche nav ul.menu li {
+    background-color: #718ca3;
+    border: solid 1px #000000;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #333333;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+}
+section div.colonneGauche nav ul.menu li.item {
+    background-color: #a1978d;
+    cursor: pointer;
+}
+section div.colonneGauche nav ul.menu li.item:hover {
+    background-color: #5777c9;
+}
+section div.colonneGauche nav ul.menu li.item a,
+section div.colonneGauche nav ul.menu li.actuel a
+{
+    text-decoration: none;
+    color: #000000;
+}
+section div.colonneGauche nav ul.menu li.item a:hover,
+section div.colonneGauche nav ul.menu li.actuel a:hover {
+    color: #333333;
+}
+section div.colonneGauche nav ul.menu li.actuel {
+    background-color: #F7A922;
+}
+section div.colonneDroite {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    margin-left: 5px;
+}
+section div.colonneDroite div.cadreSite {
+    border: solid 1px #adadad;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    background-color: #ffffeb;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #333333;
+    margin: auto;
+    font-weight: 600;
+}
+section div.colonneDroite div.cadreSite div.gauche {
+    text-align: center;
+    width: 20%;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 1px #333333;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #333333;
+    background-color: #a1978d;
+}
+section div.colonneDroite div.cadreSite div.droite {
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: 500;
+}
+section div.colonneDroite div.cadreSite div.droite h1 {
+    font-size: 0.9em;
+}
+section div.colonneDroite div.cadrePub {
+    border: solid 1px #adadad;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    background-color: #ffffeb;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #333333;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+}
+section div.colonneDroite div.pages {
+    text-align: center;
+}
+section div.colonneDroite span.clign {
+    text-decoration: blink;
+    font-weight: 600;
+    color: #c99f57;
+}
+section div.captcha {
+    background-image: url("../captcha.png");
+    width: 160px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+section div.captchaDroite {
+    display: inline-block;
+    vertical-align: middle;
+}
+footer {
+    font-size: 0.8em;
+    margin: auto;
+    text-align: center;
+}
+/*  */
+input[type="submit"],
+label {
+    cursor: pointer;
+}
+input[type="text"],
+input[type="password"] {
+    border: solid 1px #adadad;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border: solid 1px #8b8b8b;
+}
+fieldset {
+    border: solid 1px #adadad;
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    background-color: #ffffeb;    
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #333333;
+}
+textarea#codeRetour {
+    border: solid 1px #000000;
+    background-color: #D3D3D3;
+    border-radius: 3px;
+}
